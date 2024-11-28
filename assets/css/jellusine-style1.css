@@ -1,0 +1,525 @@
+/* 
+---------------------------------------------
+fuente y restablecer css
+--------------------------------------------- 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* 
+---------------------------------------------
+restablecer
+--------------------------------------------- 
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+figure, header, nav, section, article, aside, footer, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header, nav, section, article, aside, footer, hgroup {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #777;
+}
+
+/* 
+---------------------------------------------
+estilos globales
+--------------------------------------------- 
+*/
+html, body {
+  background: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*overflow: hidden; /* Para evitar el desplazamiento vertical no deseado */
+}
+/* .inter{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+
+
+::selection {
+  background: #0074D9;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background: #0074D9;
+  color: #FFFFFF;
+}
+
+@media (max-width: 991px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  .mobile-top-fix {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .mobile-bottom-fix {
+    margin-bottom: 30px;
+  }
+  .mobile-bottom-fix-big {
+    margin-bottom: 60px;
+  }
+}
+
+
+
+/* Estilo para la imagen de fondo */
+.fondo {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 119%;
+ object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+ z-index: 1; /* Asegura que la imagen esté al fondo */
+    
+}
+
+/* Estilos para los textos centrados */
+.texto-central {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Puedes cambiar el color según tu preferencia */
+  z-index: 2; /* Asegura que el texto esté por encima de las imágenes */
+}
+
+.texto-central h1 {
+    font-size: 5vw; /* Se adapta al ancho de la ventana */
+    margin: 2vh 0;
+    /*margin-top: -280px;
+    font-size: 116px;*/
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    animation: fadeOutRight 1s both;
+}
+
+.texto-central h2 {
+    font-size: -3vw; /* Se adapta al ancho de la ventana */
+    margin: 2vh 0;
+    /* margin-top: 10px;
+    font-size: 26px;*/
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    color: #FFFFFF;
+    animation: fadeOutLeft 1s both;
+}
+
+/* Estilos para los textos arriba de la imagen */
+.texto-arriba {
+  margin-top: -30px;
+  position: absolute;
+  top: 10%;
+  width: 70%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  /*padding: 0 20px;*/
+  padding: 0 5vw; /* Añade un pequeño margen desde los bordes de la ventana */
+}
+
+.texto-arriba p {
+    font-size: 1.1vw; /* El tamaño de fuente se adapta al ancho de la ventana */
+    margin: 1vh 0;
+    /*font-size: 24px;
+    margin: 10px 0;*/
+    color: white; /* Puedes cambiar el color según tu preferencia */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animación suave para el cambio de color */
+}
+
+.enlace {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.izquierda {
+  text-align: left;
+    
+}
+
+.centro {
+  text-align: center;
+}
+
+.derecha {
+  text-align: right;
+}
+
+/* Cambio de color al pasar el cursor */
+.enlace:hover p {
+  color: #A25CE0; /* El color cambia a un tono lila (puedes cambiar este color) */
+}
+
+/* Estilos del submenú */
+.submenu {
+  position: relative;
+  display: inline-block; /* Permite que el submenú sea parte del flujo de texto */
+}
+
+.submenu .centro {
+  /*font-size: 1.1vw; /* El tamaño de la fuente se adapta al ancho de la ventana */
+  font-weight: bold;
+  color: white; /* Puedes cambiar este color según tu preferencia */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transición de color al pasar el cursor */
+}
+
+.subenlaces {
+  display: none; /* El submenú está oculto por defecto */
+  position: absolute;
+  top: 100%; /* Aparece justo debajo del texto */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 3; /* Asegura que el submenú esté por encima de otros elementos */
+}
+
+
+.submenu:hover .subenlaces {
+  display: block; /* El submenú aparece al pasar el cursor */
+}
+
+.subenlaces a {
+  /*font-size: 2vw; /* Tamaño de fuente relativo */
+  color: white; /* Color de texto */
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.subenlaces a:hover {
+  background-color: rgba(219, 145, 251, 0.7); /* Cambia el color al pasar el cursor */
+}
+
+
+/* Media Queries para pantallas más pequeñas (móviles y tablets) */
+@media (max-width: 768px) {
+  .submenu .centro {
+    /*font-size: 5vw; /* Aumentar el tamaño de la fuente en pantallas más pequeñas */
+  }
+
+  .subenlaces {
+    flex-direction: column; /* Colocar los enlaces de forma vertical en pantallas pequeñas */
+    gap: 5vh; /* Espacio vertical entre los enlaces */
+  }
+
+  .subenlaces a {
+    font-size: 4vw; /* Ajuste del tamaño de fuente de los enlaces */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (teléfonos pequeños) */
+@media (max-width: 480px) {
+  .submenu .centro {
+    /*font-size: 6vw; /* Ajuste aún mayor para pantallas pequeñas */
+  }
+
+  .subenlaces {
+    gap: 8vh; /* Espacio mayor entre los enlaces */
+  }
+
+  .subenlaces a {
+    font-size: 5vw; /* Ajuste más grande para los enlaces */
+  }
+}
+
+/* Media Queries para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  .texto-arriba {
+    top: 5%; /* Ajustar la posición para pantallas pequeñas */
+    width: 90%; /* Aumentar el ancho para pantallas pequeñas */
+    padding: 0 3vw; /* Ajuste de los márgenes laterales */
+  }
+
+  .texto-arriba p {
+    font-size: 3vw; /* Aumentar el tamaño de la fuente en pantallas más pequeñas */
+    margin: 12vh 0; /* Aumentar el margen entre las líneas */
+  }
+}
+
+/* Media Queries para pantallas extra pequeñas (por ejemplo, teléfonos muy pequeños) */
+@media (max-width: 480px) {
+  .texto-arriba {
+    top: 8%; /* Reducir un poco la distancia desde la parte superior */
+    width: 95%; /* Ancho casi completo en pantallas muy pequeñas */
+    padding: 0 4vw; /* Ajuste de los márgenes laterales */
+  }
+
+  .texto-arriba p {
+    font-size: 6vw; /* Ajuste más grande para pantallas pequeñas */
+    margin: 3vh 0; /* Margen mayor */
+  }
+}
+
+
+/* Adaptación para móviles y pantallas pequeñas */
+@media (max-width: 767px) {
+    /* Ajustar imagen de fondo */
+    .fondo {
+        height: 100vh; /* Que ocupe toda la pantalla en móviles */
+    }
+
+    /* Centramos el texto para que se vea bien en pantallas pequeñas */
+    .texto-central h1 {
+        font-size: 28px;
+    }
+    
+    .texto-central h2 {
+        font-size: 20px;
+    }
+
+    /* Menú superior */
+    .texto-arriba a {
+        font-size: 14px;
+    }
+
+    /* Las imágenes en botones deben ser más pequeñas */
+    .imagen {
+        max-width: 100%; /* Las imágenes ocupan el 100% del ancho */
+    }
+    
+    /* Submenú */
+    .submenu {
+        text-align: center;
+    }
+}
+
+/* Ajustes para pantallas medianas (por ejemplo, tablets) */
+@media (max-width: 1024px) {
+    .texto-central h1 {
+        font-size: 36px;
+    }
+    
+    .texto-central h2 {
+        font-size: 24px;
+    }
+
+    /* Menú */
+    .texto-arriba a {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+    .texto-central h1 {
+        font-size: 48px;
+    }
+
+    .texto-central h2 {
+        font-size: 32px;
+    }
+
+    .texto-arriba a {
+        font-size: 18px;
+    }
+}
+
+
+/* Utilizando Flexbox para organizar mejor los elementos */
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+/* Estilo para el contenedor de las imágenes */
+.imagenes {
+    position: absolute;
+    top: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    z-index: 1; /* Las imágenes deben estar debajo de los textos */
+}
+
+/* Estilo para las imágenes como botones */
+.boton-imagen {
+    display: inline-block;
+    margin: 10px;
+    width: 100%;
+    max-width: 250px; /* Controlando el tamaño de las imágenes */
+    height: auto;
+}
+
+/* Estilos para las imágenes */
+.imagen {
+  width: 100%; /* La imagen ocupa todo el contenedor */
+  height: auto;
+  max-width: 300px; /* Para mantener un tamaño controlado en pantallas grandes */ 
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Opcional: da bordes redondeados a las imágenes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave de transformación y sombra */
+}
+
+.boton-imagen:hover .imagen {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen cuando se pasa el cursor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Agrega sombra a la imagen cuando se pasa el cursor */
+}
+
+
+#preloader {
+  overflow: hidden;
+  background-image: linear-gradient(145deg, #DB91FB 0%, #ADADF1 100%);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 99999;
+  color: #FFFFFF;
+}
+
+#preloader .jumper {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}
+
+#preloader .jumper > div {
+  background-color: #FFFFFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  position: absolute;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: jumper 1s 0s linear infinite;
+  animation: jumper 1s 0s linear infinite;
+}
+
+#preloader .jumper > div:nth-child(2) {
+  -webkit-animation-delay: 0.33333s;
+  animation-delay: 0.33333s;
+}
+
+#preloader .jumper > div:nth-child(3) {
+  -webkit-animation-delay: 0.66666s;
+  animation-delay: 0.66666s;
+}
+
+@-webkit-keyframes jumper {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes jumper {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+

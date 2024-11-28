@@ -1,0 +1,897 @@
+/* 
+---------------------------------------------
+fuente y restablecer css
+--------------------------------------------- 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* 
+---------------------------------------------
+restablecer
+--------------------------------------------- 
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+figure, header, nav, section, article, aside, footer, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header, nav, section, article, aside, footer, hgroup {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #777;
+}
+
+/* 
+---------------------------------------------
+estilos globales
+--------------------------------------------- 
+*/
+html, body {
+  background: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*overflow: hidden; /* Para evitar el desplazamiento vertical no deseado */
+}
+/* .inter{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+
+::selection {
+  background: #0074D9;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background: #0074D9;
+  color: #FFFFFF;
+}
+
+@media (max-width: 991px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  .mobile-top-fix {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .mobile-bottom-fix {
+    margin-bottom: 30px;
+  }
+  .mobile-bottom-fix-big {
+    margin-bottom: 60px;
+  }
+}
+
+
+
+/* Estilo para la imagen de fondo */
+.fondo {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 119%;
+ object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+ z-index: 1; /* Asegura que la imagen esté al fondo */
+    
+}
+
+/* Estilos para los textos centrados */
+.texto-central {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Puedes cambiar el color según tu preferencia */
+  z-index: 2; /* Asegura que el texto esté por encima de las imágenes */
+}
+
+.texto-central h1 {
+    font-size: 5vw; /* Se adapta al ancho de la ventana */
+    margin: 2vh 0;
+    /*margin-top: -280px;
+    font-size: 116px;*/
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    animation: fadeOutRight 1s both;
+}
+
+.texto-central h2 {
+    font-size: -3vw; /* Se adapta al ancho de la ventana */
+    margin: 2vh 0;
+    /* margin-top: 10px;
+    font-size: 26px;*/
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    color: #FFFFFF;
+    animation: fadeOutLeft 1s both;
+}
+
+/* Estilos para los textos arriba de la imagen */
+.texto-arriba {
+  margin-top: -30px;
+  position: absolute;
+  top: 10%;
+  width: 70%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  /*padding: 0 20px;*/
+  padding: 0 5vw; /* Añade un pequeño margen desde los bordes de la ventana */
+}
+
+.texto-arriba p {
+    font-size: 1.1vw; /* El tamaño de fuente se adapta al ancho de la ventana */
+    margin: 1vh 0;
+    /*font-size: 24px;
+    margin: 10px 0;*/
+    color: white; /* Puedes cambiar el color según tu preferencia */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animación suave para el cambio de color */
+}
+
+.enlace {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.izquierda {
+  text-align: left;
+    
+}
+
+.centro {
+  text-align: center;
+}
+
+.derecha {
+  text-align: right;
+}
+
+/* Cambio de color al pasar el cursor */
+.enlace:hover p {
+  color: #A25CE0; /* El color cambia a un tono lila (puedes cambiar este color) */
+}
+
+/* Estilos para los textos arriba de la imagen */
+.texto-arriba3 {
+  margin-top: -30px;
+  margin-left: -545px;
+  position: absolute;
+  top: 10%;
+  width: 70%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  /*padding: 0 20px;*/
+  padding: 0 5vw; /* Añade un pequeño margen desde los bordes de la ventana */
+}
+
+.texto-arriba3 p {
+    font-size: 1.1vw; /* El tamaño de fuente se adapta al ancho de la ventana */
+    margin: 1vh 0;
+    /*font-size: 24px;
+    margin: 10px 0;*/
+    color: white; /* Puedes cambiar el color según tu preferencia */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animación suave para el cambio de color */
+}
+
+.enlace {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.izquierda {
+  text-align: left;
+    
+}
+
+.centro {
+  text-align: center;
+}
+
+.derecha {
+  text-align: right;
+}
+
+/* Cambio de color al pasar el cursor */
+.enlace:hover3 p {
+  color: #A25CE0; /* El color cambia a un tono lila (puedes cambiar este color) */
+}
+
+
+
+
+/* Estilo para el contenedor de las imágenes */
+.imagenes {
+  position: absolute;
+  margin-left: -650px;
+  top: 60%;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  /* gap: 20px;*/
+  z-index: 1; /* Las imágenes deben estar debajo de los textos */
+*}
+
+/* Estilo para el contenedor para la imagen en nosotros */
+.imagenes1 {
+  position: absolute;
+  top: 30%;
+  right: 60%;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  /* gap: 20px;*/
+  z-index: 1; /* Las imágenes deben estar debajo de los textos */
+}
+
+/* Estilo para la imagen en nosotros*/
+.imagen {
+  /*width: 371px;*/
+  /*height: 607px;*/
+  width: 18vw; /* El tamaño de las imágenes se ajusta al ancho de la ventana */
+  height: auto; /* Mantiene la proporción original de las imágenes */
+  object-fit: cover;
+  /*max-height: 20vh; /* Limita la altura máxima de las imágenes para evitar que sean demasiado grandes */
+}
+
+/* Estilo para las imágenes como botones */
+.boton-imagen {
+  display: inline-block;
+  width: 20vw; /* El tamaño de las imágenes se ajusta al ancho de la ventana */
+  height: auto;
+}
+
+.imagen {
+  width: 100%; /* La imagen ocupa todo el contenedor */
+  height: 100%;
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Opcional: da bordes redondeados a las imágenes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave de transformación y sombra */
+}
+
+.boton-imagen:hover .imagen {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen cuando se pasa el cursor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Agrega sombra a la imagen cuando se pasa el cursor */
+}
+
+/* Estilos del submenú */
+.submenu {
+  position: relative;
+  display: inline-block; /* Permite que el submenú sea parte del flujo de texto */
+}
+
+.subenlaces {
+  display: none; /* El submenú está oculto por defecto */
+  position: absolute;
+  top: 100%; /* Aparece justo debajo del texto */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 3; /* Asegura que el submenú esté por encima de otros elementos */
+}
+
+.submenu:hover .subenlaces {
+  display: block; /* El submenú aparece al pasar el cursor */
+}
+
+.subenlaces a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.subenlaces a:hover {
+  background-color: rgba(219, 145, 251, 0.7); /* Cambia el color al pasar el cursor */
+}
+
+
+.contenedor1 {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Utiliza la altura de la ventana del navegador */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden; /* Evitar que el contenido sobrepase el contenedor */
+}
+
+/* Estilo para la imagen de fondo */
+.background-image {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 119%;
+ object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+ z-index: 1; /* Asegura que la imagen esté al fondo */
+    
+}
+
+/* Textos alineados a la izquierda */
+.left-text {
+  position: absolute;
+  left: 5vw; /* Usamos porcentaje para que se ajuste */
+  /*left: 30px; /* Ajusta según sea necesario */
+  color: white;
+  /*font-size: 24px;*/
+  font-size: 2vw; /* Relativo al ancho de la pantalla */
+  font-weight: bold;
+  z-index: 1;
+}
+
+.left-text-1 {
+    top: 24vh; /* Relativo a la altura de la pantalla */
+    /*top: 200px; /* Ajusta la posición */
+    font-size: 32px;
+    color: #adadf1;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.left-text-2 {
+    top: 28vh; /* Relativo a la altura de la pantalla */
+    /*top: 230px; /* Ajusta la posición */
+    font-size: 96px;
+    color: #db91fb;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.left-text-3 {
+    top: 43vh; /* Relativo a la altura de la pantalla */
+    /*top: 350px; /* Ajusta la posición */
+    font-size: 32px;
+    font-style: italic;
+    font-weight: medium;
+}
+
+/* Párrafo debajo de los textos alineados a la izquierda */
+.left-paragraph {
+    position: absolute;
+    left: 5vw;
+    top: 50vh;
+    /*left: 30px; /* Ajusta según sea necesario */
+    /*top: 410px; /* Ajusta para que quede debajo de los 3 textos */
+    color: white;
+    font-size: 1.2vw;
+    /*font-size: 24px;*/
+    line-height: 1.6;
+    width: 40%; /* Opcional: Ajusta el ancho del párrafo */
+    z-index: 1;
+    font-weight: lighter;
+}
+
+/* Textos alineados a la izquierda */
+.center-text {
+  position: absolute;
+  left: 45vw; /* Usamos porcentaje para que se ajuste */
+  /*left: 30px; /* Ajusta según sea necesario */
+  color: white;
+  /*font-size: 24px;*/
+  font-size: 2vw; /* Relativo al ancho de la pantalla */
+  font-weight: bold;
+  z-index: 1;
+}
+
+.center-text-1 {
+    top: 24vh; /* Relativo a la altura de la pantalla */
+    /*top: 200px; /* Ajusta la posición */
+    font-size: 75px;
+    color: #db91fb;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.center-text-2 {
+    top: 35vh; /* Relativo a la altura de la pantalla */
+    /*top: 230px; /* Ajusta la posición */
+    font-size: 75px;
+    color: #db91fb;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.center-text-3 {
+    top: 43vh; /* Relativo a la altura de la pantalla */
+    /*top: 350px; /* Ajusta la posición */
+    font-size: 32px;
+    font-style: italic;
+    font-weight: medium;
+}
+
+/* Párrafo debajo de los textos alineados a la izquierda */
+.center-paragraph {
+    position: absolute;
+    left: 45vw;
+    top: 48vh;
+    /*left: 30px; /* Ajusta según sea necesario */
+    /*top: 410px; /* Ajusta para que quede debajo de los 3 textos */
+    color: white;
+    font-size: 1.2vw;
+    /*font-size: 24px;*/
+    line-height: 1.6;
+    width: 50%; /* Opcional: Ajusta el ancho del párrafo */
+    z-index: 1;
+    font-weight: lighter;
+}
+
+
+
+
+
+/* Estilos para los textos arriba de la imagen */
+.texto-arriba1 {
+  margin-top: -30px;
+  
+  position: absolute;
+  top: 10%;
+  width: 70%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  /*padding: 0 20px;*/
+  padding: 0 5vw; /* Añade un pequeño margen desde los bordes de la ventana */
+}
+
+.texto-arriba1 p {
+    font-size: 1.1vw; /* El tamaño de fuente se adapta al ancho de la ventana */
+    margin: 1vh 0;
+    /*font-size: 24px;
+    margin: 10px 0;*/
+    color: white; /* Puedes cambiar el color según tu preferencia */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animación suave para el cambio de color */
+}
+
+.izquierda1 {
+  text-align: left;
+    
+}
+
+.centro1 {
+  text-align: center;
+}
+
+.derecha1 {
+  text-align: right;
+}
+
+/* Cambio de color al pasar el cursor */
+.enlace:hover1 p {
+  color: #A25CE0; /* El color cambia a un tono lila (puedes cambiar este color) */
+}
+
+
+/* Estilos para los textos arriba de la imagen */
+.texto-arriba2 {
+  margin-top: -30px;
+  /*margin-left: -675px;*/
+  position: absolute;
+  top: 10%;
+  width: 70%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  /*padding: 0 20px;*/
+  padding: 0 5vw; /* Añade un pequeño margen desde los bordes de la ventana */
+}
+
+.texto-arriba2 p {
+    font-size: 1.1vw; /* El tamaño de fuente se adapta al ancho de la ventana */
+    margin: 1vh 0;
+    /*font-size: 24px;
+    margin: 10px 0;*/
+    color: white; /* Puedes cambiar el color según tu preferencia */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animación suave para el cambio de color */
+}
+
+.izquierda2 {
+  text-align: left;
+    
+}
+
+.centro2 {
+  text-align: center;
+}
+
+.derecha2 {
+  text-align: right;
+}
+
+/* Cambio de color al pasar el cursor */
+.enlace:hover2 p {
+  color: #A25CE0; /* El color cambia a un tono lila (puedes cambiar este color) */
+}
+
+
+/* Estilos para los textos arriba de la imagen */
+.texto-arriba4 {
+  margin-top: -30px;
+  margin-left: -545px;
+  position: absolute;
+  top: 10%;
+  width: 70%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  /*padding: 0 20px;*/
+  padding: 0 5vw; /* Añade un pequeño margen desde los bordes de la ventana */
+}
+
+.texto-arriba4 p {
+    font-size: 1.1vw; /* El tamaño de fuente se adapta al ancho de la ventana */
+    margin: 1vh 0;
+    /*font-size: 24px;
+    margin: 10px 0;*/
+    color: white; /* Puedes cambiar el color según tu preferencia */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Animación suave para el cambio de color */
+}
+
+.izquierda2 {
+  text-align: left;
+    
+}
+
+.centro2 {
+  text-align: center;
+}
+
+.derecha2 {
+  text-align: right;
+}
+
+/* Cambio de color al pasar el cursor */
+.enlace:hover4 p {
+  color: #A25CE0; /* El color cambia a un tono lila (puedes cambiar este color) */
+}
+
+
+
+
+
+/* Carrusel alineado a la derecha */
+.carousel-container {
+  position: absolute;
+  top: 30vh;
+  right: -20vw;
+  /* top: 300px;*/
+  /* right: -830px; /* Lo alinea a la derecha */
+  z-index: 1;
+  width: 50vw; /* Ajuste relativo al ancho de la pantalla */
+  height: 25vh; /* Relativo a la altura de la pantalla */
+  /*width: 1500px; /* Ajusta el ancho del carrusel */
+  /*height: 210px; /* Ajusta la altura */
+  overflow: hidden; /* Oculta las imágenes que no estén visibles */
+ /* border-radius: 10px; /* Opcional: bordes redondeados */
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Opcional: sombra para el carrusel */
+  cursor: pointer; /* Indicamos que es interactivo */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 6s ease; /* Transición para el movimiento */
+}
+
+.carousel-image {
+  width: 500%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Indicadores de imagen */
+.carousel-indicators {
+  position: absolute;
+  bottom: 300px;
+  left: 60%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: rgba(173, 173, 241, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator:hover, .indicator.active {
+  background-color: purple;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .left-text, .top-text {
+    font-size: 4vw;
+  }
+
+  .carousel-container {
+    width: 60vw;
+    height: 40vh;
+  }
+
+  .left-paragraph {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-text, .top-text {
+    font-size: 5vw;
+  }
+
+  .carousel-container {
+    width: 80vw;
+    height: 50vh;
+  }
+
+  .left-paragraph {
+    font-size: 4vw;
+  }
+}
+
+
+
+
+/* Apartado de contacto */
+.contacto-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.contacto-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #5c6bc0;
+    background-color: #fff;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+button.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+button.btn:active {
+    background-color: #003d7a;
+}
+
+
+.contacto {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.contacto-item {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contacto-item i {
+    margin-right: 10px;
+}
+
+.social-icon i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+#preloader {
+  overflow: hidden;
+  background-image: linear-gradient(145deg, #DB91FB 0%, #ADADF1 100%);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 99999;
+  color: #FFFFFF;
+}
+
+#preloader .jumper {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}
+
+#preloader .jumper > div {
+  background-color: #FFFFFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  position: absolute;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: jumper 1s 0s linear infinite;
+  animation: jumper 1s 0s linear infinite;
+}
+
+#preloader .jumper > div:nth-child(2) {
+  -webkit-animation-delay: 0.33333s;
+  animation-delay: 0.33333s;
+}
+
+#preloader .jumper > div:nth-child(3) {
+  -webkit-animation-delay: 0.66666s;
+  animation-delay: 0.66666s;
+}
+
+@-webkit-keyframes jumper {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes jumper {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
