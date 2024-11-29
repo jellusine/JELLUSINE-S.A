@@ -385,11 +385,11 @@ html, body {
 /* Estilos para pantallas grandes (escritorios) */
 @media (min-width: 1025px) {
     .texto-central h1 {
-        font-size: 48px;
+    font-size: 120px;
     }
 
     .texto-central h2 {
-        font-size: 32px;
+    font-size: 24px;
     }
 
     .texto-arriba a {
@@ -521,5 +521,3 @@ html, body {
     opacity: 0;
   }
 }
-
-
